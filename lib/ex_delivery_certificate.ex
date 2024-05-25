@@ -24,15 +24,15 @@ defmodule ExDeliveryCertificate do
           country: "Germany"
         },
         signer_role: %{
-          claimed_roles: ["role with ä", "role2"]
+          claimed_roles: ["Delivery Provider", "Brifle"]
         }
       },
       signed_data_object_properties: %{
         data_object_format: [
           %{
-          mime_type: "text/xml",
+          mime_type: "application/json",
           encoding: "UTF-8",
-          description: "Die Beschreibung",
+          description: "The data for proof of delivery",
           object_reference: "#doc-1"
         },
       ]

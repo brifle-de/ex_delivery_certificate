@@ -4,9 +4,9 @@
     <version>1.0</version>
   </Metadata>
   <SignatureContents>
-    <SignatureContent id="data-certificate_data">{"delivery_date":"2024-05-25T20:29:00.218258Z","delivery_provider":"provider","document_hash":"hash","receiver_name":"receiver","sender_name":"sender"}</SignatureContent>
+    <SignatureContent id="data-certificate_data">{"delivery_date":"2024-05-25T21:15:44.496712Z","delivery_provider":"provider","document_hash":"hash","receiver_name":"receiver","sender_name":"sender"}</SignatureContent>
   </SignatureContents>
-  <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="b068d087c1f57e44f44e7a50a5c676e1">
+  <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="9fffcf6deb91a42cb2101e0a19c5b61a">
     <ds:SignedInfo>
       <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></ds:CanonicalizationMethod>
       <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"></ds:SignatureMethod>
@@ -16,7 +16,7 @@
         </ds:Transforms>
         <ds:DigestMethod Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha3-512"></ds:DigestMethod>
         <ds:DigestValue>
-          vvUOQ+J5JsZ7JIvWNvsyXgTL4jb6WnHH6OoekzNl68q6rNvUYe5/eN744SPpgFGVXijSH9sGtkMI1HO/f8EKMA==
+          5ou3vQfv0hccH7DHPVkzRoyDUJz8/GHsIRtOaxviBk+RPgjlxz5OARczu+a72dj0D7agqeGmvD3he3hERewLRw==
         </ds:DigestValue>
       </ds:Reference>
       <ds:Reference URI="#SignedProperties">
@@ -25,33 +25,33 @@
         </ds:Transforms>
         <ds:DigestMethod Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha3-512"></ds:DigestMethod>
         <ds:DigestValue>
-          7N971T/XydFEpjOkIZK9zLZvM5FEdWRfOgqQE1jGXTLNVNj7LqPPIWz32s3lzMeoxtglXgiUNBjAUaj7jIoEeg==
+          LUPMfO8VrhpbXJx/v/dC5aAHTp/kCIUHw3q88h+UsIxfeieVQDFgM7IJf0InNESmelchZnE/9uysfE6L4ePAXg==
         </ds:DigestValue>
       </ds:Reference>
     </ds:SignedInfo>
     <ds:SignatureValue>
-      nwYleo27wTG//e0zdnkDC2xQwPTfYEvt7eNqLtTYDNVZ49P5YLYsNhq019FsstuFiOvlyxCijSdQ8p/xV/W0JA==
+      THp6GGbG+loyi9+Mrdvf4omYmXCoomS5ZNkJcOsMqSePYjbNO9AqdqS+MIfuqWdec82xZYHRjjO5sY+9M7xJ0Q==
     </ds:SignatureValue>
     <ds:KeyInfo>
       <ds:X509Data>
         <ds:X509Certificate>
-          MIICSDCCAe+gAwIBAgIJAJEEL3i8JBxTMAoGCCqGSM49BAMCMFkxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJDQTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwEQWNtZTEWMBQGA1UEAwwNRUNEU0EgUm9vdCBDQTAeFw0yNDA1MjUyMDI0MDBaFw0yNTA2MjQyMDI5MDBaMFIxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJDQTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwEQWNtZTEPMA0GA1UEAwwGU2FtcGxlMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEhgBpvji+BxhYwEA/LO+HqLa+g3v9DwnnYd7maQQY9iqHK8VldBH96/MWlDGyXUDEYQ8dbJvHCu8JKMBZaNohoaOBpjCBozAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwHQYDVR0OBBYEFPSZZxou0XL/ZniELWg6Rlq03YTVMB8GA1UdIwQYMBaAFKSFtPBKqkWbEXOCIUtnIHO6dZoYMCcGA1UdEQQgMB6CC2V4YW1wbGUub3Jngg93d3cuZXhhbXBsZS5vcmcwCgYIKoZIzj0EAwIDRwAwRAIgECekMlG+8BGsI5HMBFEmTDR1H42aU29g8pjvotdCujkCIBbXLSJ/mkRMy3IGcMJxHZOzJ7mQKofN6TJeJmbHHNxa
+          MIICSDCCAe6gAwIBAgIIA+Bw3dxvrc4wCgYIKoZIzj0EAwIwWTELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAkNBMRYwFAYDVQQHDA1TYW4gRnJhbmNpc2NvMQ0wCwYDVQQKDARBY21lMRYwFAYDVQQDDA1FQ0RTQSBSb290IENBMB4XDTI0MDUyNTIxMTA0NFoXDTI1MDYyNDIxMTU0NFowUjELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAkNBMRYwFAYDVQQHDA1TYW4gRnJhbmNpc2NvMQ0wCwYDVQQKDARBY21lMQ8wDQYDVQQDDAZTYW1wbGUwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATFL3o/uoz2on4J3k7yEDcUW2gu+a8qbaQZnogxsh7Fesr1x68IjvSu+o1SCxCAsvUWupU/Y5ZuxMMMRGQe1W25o4GmMIGjMAkGA1UdEwQCMAAwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAdBgNVHQ4EFgQUEh+ZOYzLAV2pjy3OvEtchENekwMwHwYDVR0jBBgwFoAUvxdQWGTcAMBIDYibw+yOtgeuZCswJwYDVR0RBCAwHoILZXhhbXBsZS5vcmeCD3d3dy5leGFtcGxlLm9yZzAKBggqhkjOPQQDAgNIADBFAiEApxfF/1n/Hryfs10h4mT3Uo66e/auiImke3cMDSOCbAUCIBWD1tpIsL6C3t1i32nSsYcgPAX+qHdU7ryqcGYYTag6
         </ds:X509Certificate>
       </ds:X509Data>
     </ds:KeyInfo>
     <ds:Object>
-      <xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#b068d087c1f57e44f44e7a50a5c676e1">
+      <xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#9fffcf6deb91a42cb2101e0a19c5b61a">
         <xades:SignedProperties Id="SignedProperties">
           <xades:SignedSignatureProperties>
             <xades:SigningTime>
-              2024-05-25T20:29:00.235788Z
+              2024-05-25T21:15:44.511251Z
             </xades:SigningTime>
             <xades:SigningCertificate>
               <xades:Cert>
                 <xades:CertDigest>
                   <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></ds:DigestMethod>
                   <ds:DigestValue>
-                    l5ZI5QUKkr68NorLj9pnyRIiRDfOQD8EbIYbqOwGBhY=
+                    pnJsqiw3Z5uTSA5YFAyxEMByW0r1uRxLcqxyn78G/nY=
                   </ds:DigestValue>
                 </xades:CertDigest>
                 <xades:IssuerSerial>
@@ -59,7 +59,7 @@
                     ECDSA Root CA
                   </ds:X509IssuerName>
                   <ds:X509SerialNumber>
-                    10449529231005457491
+                    279347275085360590
                   </ds:X509SerialNumber>
                 </xades:IssuerSerial>
               </xades:Cert>
@@ -78,10 +78,10 @@
             <xades:SignerRole>
               <xades:ClaimedRoles>
                 <xades:ClaimedRole>
-                  role with ä
+                  Delivery Provider
                 </xades:ClaimedRole>
                 <xades:ClaimedRole>
-                  role2
+                  Brifle
                 </xades:ClaimedRole>
               </xades:ClaimedRoles>
               <xades:CertifiedRoles>
@@ -92,14 +92,14 @@
           <xades:SignedDataObjectProperties>
             <xades:DataObjectFormat ObjectReference="#doc-1">
               <xades:MimeType>
-                text/xml
+                application/json
               </xades:MimeType>
               <xades:Encoding>
                 UTF-8
               </xades:Encoding>
               <xades:ObjectIdentifier>
                 <xades:Description>
-                  Die Beschreibung
+                  The data for proof of delivery
                 </xades:Description>
               </xades:ObjectIdentifier>
             </xades:DataObjectFormat>

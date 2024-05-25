@@ -17,14 +17,25 @@ defmodule ExDeliveryCertificateTest do
 
   test "issue_certificate" do
     {pem_key, pem_cert} = generate_dummy_cert()
-    ExDeliveryCertificate.issue_certificate(test_data(), pem_key, pem_cert)
+    {:ok, res} = ExDeliveryCertificate.issue_certificate(test_data(), pem_key, pem_cert)
+
+    assert {:ok, cert } = ExDeliveryCertificate.validate_certificate(res)
+
+    assert cert.sender_name == "sender"
+    assert cert.receiver_name == "receiver"
+    assert cert.document_hash == "hash"
+    assert cert.delivery_provider == "provider"
+
+
+
+
   end
 
   test "validate_certificate" do
     xml_string = File.read!("test/files/test_cert.xml")
     assert {:ok,
     %ExDeliveryCertificate.CertificateData{
-      delivery_date: "2024-05-25T20:29:00.218258Z",
+      delivery_date: "2024-05-25T21:15:44.496712Z",
       delivery_provider: "provider",
       document_hash: "hash",
       receiver_name: "receiver",
