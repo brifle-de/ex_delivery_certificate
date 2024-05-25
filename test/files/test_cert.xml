@@ -1,0 +1,114 @@
+<SignatureDocument xmlns="http://uri.etsi.org/01903/v1.1.1#" elementFormDefault="qualified" targetNamespace="http://uri.etsi.org/01903/v1.1.1#">
+  <Metadata>
+    <baseUrl>https://documents.brifle.de/</baseUrl>
+    <version>1.0</version>
+  </Metadata>
+  <SignatureContents>
+    <SignatureContent id="data-certificate_data">{"delivery_date":"2024-05-25T20:29:00.218258Z","delivery_provider":"provider","document_hash":"hash","receiver_name":"receiver","sender_name":"sender"}</SignatureContent>
+  </SignatureContents>
+  <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="b068d087c1f57e44f44e7a50a5c676e1">
+    <ds:SignedInfo>
+      <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></ds:CanonicalizationMethod>
+      <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"></ds:SignatureMethod>
+      <ds:Reference Id="doc-1" URI="#data-certificate_data">
+        <ds:Transforms>
+          <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></ds:Transform>
+        </ds:Transforms>
+        <ds:DigestMethod Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha3-512"></ds:DigestMethod>
+        <ds:DigestValue>
+          vvUOQ+J5JsZ7JIvWNvsyXgTL4jb6WnHH6OoekzNl68q6rNvUYe5/eN744SPpgFGVXijSH9sGtkMI1HO/f8EKMA==
+        </ds:DigestValue>
+      </ds:Reference>
+      <ds:Reference URI="#SignedProperties">
+        <ds:Transforms>
+          <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></ds:Transform>
+        </ds:Transforms>
+        <ds:DigestMethod Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha3-512"></ds:DigestMethod>
+        <ds:DigestValue>
+          7N971T/XydFEpjOkIZK9zLZvM5FEdWRfOgqQE1jGXTLNVNj7LqPPIWz32s3lzMeoxtglXgiUNBjAUaj7jIoEeg==
+        </ds:DigestValue>
+      </ds:Reference>
+    </ds:SignedInfo>
+    <ds:SignatureValue>
+      nwYleo27wTG//e0zdnkDC2xQwPTfYEvt7eNqLtTYDNVZ49P5YLYsNhq019FsstuFiOvlyxCijSdQ8p/xV/W0JA==
+    </ds:SignatureValue>
+    <ds:KeyInfo>
+      <ds:X509Data>
+        <ds:X509Certificate>
+          MIICSDCCAe+gAwIBAgIJAJEEL3i8JBxTMAoGCCqGSM49BAMCMFkxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJDQTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwEQWNtZTEWMBQGA1UEAwwNRUNEU0EgUm9vdCBDQTAeFw0yNDA1MjUyMDI0MDBaFw0yNTA2MjQyMDI5MDBaMFIxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJDQTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwEQWNtZTEPMA0GA1UEAwwGU2FtcGxlMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEhgBpvji+BxhYwEA/LO+HqLa+g3v9DwnnYd7maQQY9iqHK8VldBH96/MWlDGyXUDEYQ8dbJvHCu8JKMBZaNohoaOBpjCBozAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwHQYDVR0OBBYEFPSZZxou0XL/ZniELWg6Rlq03YTVMB8GA1UdIwQYMBaAFKSFtPBKqkWbEXOCIUtnIHO6dZoYMCcGA1UdEQQgMB6CC2V4YW1wbGUub3Jngg93d3cuZXhhbXBsZS5vcmcwCgYIKoZIzj0EAwIDRwAwRAIgECekMlG+8BGsI5HMBFEmTDR1H42aU29g8pjvotdCujkCIBbXLSJ/mkRMy3IGcMJxHZOzJ7mQKofN6TJeJmbHHNxa
+        </ds:X509Certificate>
+      </ds:X509Data>
+    </ds:KeyInfo>
+    <ds:Object>
+      <xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#b068d087c1f57e44f44e7a50a5c676e1">
+        <xades:SignedProperties Id="SignedProperties">
+          <xades:SignedSignatureProperties>
+            <xades:SigningTime>
+              2024-05-25T20:29:00.235788Z
+            </xades:SigningTime>
+            <xades:SigningCertificate>
+              <xades:Cert>
+                <xades:CertDigest>
+                  <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></ds:DigestMethod>
+                  <ds:DigestValue>
+                    l5ZI5QUKkr68NorLj9pnyRIiRDfOQD8EbIYbqOwGBhY=
+                  </ds:DigestValue>
+                </xades:CertDigest>
+                <xades:IssuerSerial>
+                  <ds:X509IssuerName>
+                    ECDSA Root CA
+                  </ds:X509IssuerName>
+                  <ds:X509SerialNumber>
+                    10449529231005457491
+                  </ds:X509SerialNumber>
+                </xades:IssuerSerial>
+              </xades:Cert>
+            </xades:SigningCertificate>
+            <xades:SignaturePolicyIdentifier>
+              <xades:SignaturePolicyImplied></xades:SignaturePolicyImplied>
+            </xades:SignaturePolicyIdentifier>
+            <xades:SignatureProductionPlace>
+              <xades:City>
+                Stuttgart
+              </xades:City>
+              <xades:CountryName>
+                Germany
+              </xades:CountryName>
+            </xades:SignatureProductionPlace>
+            <xades:SignerRole>
+              <xades:ClaimedRoles>
+                <xades:ClaimedRole>
+                  role with ä
+                </xades:ClaimedRole>
+                <xades:ClaimedRole>
+                  role2
+                </xades:ClaimedRole>
+              </xades:ClaimedRoles>
+              <xades:CertifiedRoles>
+
+              </xades:CertifiedRoles>
+            </xades:SignerRole>
+          </xades:SignedSignatureProperties>
+          <xades:SignedDataObjectProperties>
+            <xades:DataObjectFormat ObjectReference="#doc-1">
+              <xades:MimeType>
+                text/xml
+              </xades:MimeType>
+              <xades:Encoding>
+                UTF-8
+              </xades:Encoding>
+              <xades:ObjectIdentifier>
+                <xades:Description>
+                  Die Beschreibung
+                </xades:Description>
+              </xades:ObjectIdentifier>
+            </xades:DataObjectFormat>
+          </xades:SignedDataObjectProperties>
+        </xades:SignedProperties>
+        <xades:UnsignedProperties>
+          <xades:UnsignedSignatureProperties></xades:UnsignedSignatureProperties>
+        </xades:UnsignedProperties>
+      </xades:QualifyingProperties>
+    </ds:Object>
+  </ds:Signature>
+</SignatureDocument>

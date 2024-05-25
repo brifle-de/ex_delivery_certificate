@@ -21,8 +21,14 @@ defmodule ExDeliveryCertificate.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:xml_builder, "~> 2.2"},
+      {:xmerl_c14n, "~> 0.2.0"},
+      {:x509, "~> 0.8.8"},
+      {:sweet_xml, "~> 0.7.4"},
+        # own library for create xml based signatures
+      {:ex_crypto_sign, git: "git@github.com:brifle-de/ex_crypto_sign.git", tag: "v0.2.4"},
+
+      {:jason, "~> 1.4.1"},
     ]
   end
 end
