@@ -2,7 +2,11 @@ defmodule ExDeliveryCertificate.CertificateData do
   defstruct [
     :sender_name,
     :receiver_name,
-    :document_hash, # sha256 hash of the document
+    :tenant_id, # the tenant id of the sender
+    :receiver_id, # the account id of the receiver
+    :document, # json string document or base64 encoded document
+    :request_data, # base64 encoded request data or json string
+    :action_metadata, # base64 encoded or json string action metadata
     :delivery_date,
     :delivery_provider,
   ]
@@ -14,6 +18,13 @@ defmodule ExDeliveryCertificate.CertificateData do
     %__MODULE__{
       delivery_provider: provider
     }
+  end
+
+  @doc """
+  Add the given options to the CertificateDate struct.
+  """
+  def add(options) when is_map(options) do
+    new() |> Map.merge(options)
   end
 
   @doc """
@@ -31,12 +42,6 @@ defmodule ExDeliveryCertificate.CertificateData do
   end
 
 
-  @doc """
-  Add the document hash to the CertificateDate struct.
-  """
-  def add_document_hash(data, document_hash) do
-    %{data | document_hash: document_hash}
-  end
 
   @doc """
   Add the delivery date to the CertificateDate struct.
@@ -50,6 +55,41 @@ defmodule ExDeliveryCertificate.CertificateData do
   """
   def add_delivery_provider(data, delivery_provider) do
     %{data | delivery_provider: delivery_provider}
+  end
+
+  @doc """
+  add the tenant id to the certificate data
+  """
+  def add_tenant_id(data, tenant_id) do
+    %{data | tenant_id: tenant_id}
+  end
+
+  @doc """
+  add the document to the certificate data
+  """
+  def add_document(data, document) do
+    %{data | document: document}
+  end
+
+  @doc """
+  add the request data to the certificate data
+  """
+  def add_request_data(data, request_data) do
+    %{data | request_data: request_data}
+  end
+
+  @doc """
+  add the action metadata to the certificate data
+  """
+  def add_action_metadata(data, action_metadata) do
+    %{data | action_metadata: action_metadata}
+  end
+
+  @doc """
+  add the receiver id to the certificate data
+  """
+  def add_receiver_id(data, receiver_id) do
+    %{data | receiver_id: receiver_id}
   end
 
   @doc """

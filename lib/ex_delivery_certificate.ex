@@ -39,18 +39,21 @@ defmodule ExDeliveryCertificate do
       },
       unsigned_signature_properties: %{
 
-      }
+      },
+      meta: %{"version" => "1.0"}
     ]
   end
 
 
   def issue_certificate(%CertificateData{} = properties, private_pem, certificate_pem) do
 
-    id = :crypto.strong_rand_bytes(16) |> Base.encode16(case: :lower)
+    id = :crypto.strong_rand_bytes(16) |> Base.encode16(case: :lower) |> then(&(
+      "_" <> &1)
+    )
     data = CertificateData.to_json(properties)
     opts = get_ops(certificate_pem)
     xml_data = ExCryptoSign.prepare_raw_embedded(id, [%{id: "certificate_data", content: data}],certificate_pem,opts)
-    {:ok, {xml_document_string, signature}} = ExCryptoSign.Util.Signer.sign(xml_data, private_pem)
+    {:ok, {xml_document_string, _signature}} = ExCryptoSign.Util.Signer.sign(xml_data, private_pem)
 
     {:ok, xml_document_string}
   end

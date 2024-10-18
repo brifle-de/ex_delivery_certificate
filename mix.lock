@@ -1,5 +1,5 @@
 %{
-  "ex_crypto_sign": {:git, "git@github.com:brifle-de/ex_crypto_sign.git", "56d8fab20c3517707ef0f8c7d1e2f5aabb62a8e3", [tag: "v0.2.4"]},
+  "ex_crypto_sign": {:git, "git@github.com:brifle-de/ex_crypto_sign.git", "fe61b5bea77d2a0f11a8fafd1dd4330808aaf69f", [tag: "v0.4.1"]},
   "jason": {:hex, :jason, "1.4.1", "af1504e35f629ddcdd6addb3513c3853991f694921b1b9368b0bd32beb9f1b63", [:mix], [{:decimal, "~> 1.0 or ~> 2.0", [hex: :decimal, repo: "hexpm", optional: true]}], "hexpm", "fbb01ecdfd565b56261302f7e1fcc27c4fb8f32d56eab74db621fc154604a7a1"},
   "starkbank_ecdsa": {:hex, :starkbank_ecdsa, "1.1.0", "4f5a700ef25dd4c8525d5aa9806ed36f63642cc74d9df606f6e5927b653a664b", [:mix], [], "hexpm", "c1677a9dcbf36fbd76bc1befae593514b3161ba49a4d22a83417014a41f64bf9"},
   "sweet_xml": {:hex, :sweet_xml, "0.7.4", "a8b7e1ce7ecd775c7e8a65d501bc2cd933bff3a9c41ab763f5105688ef485d08", [:mix], [], "hexpm", "e7c4b0bdbf460c928234951def54fe87edf1a170f6896675443279e2dbeba167"},

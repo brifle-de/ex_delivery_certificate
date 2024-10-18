@@ -10,7 +10,10 @@ defmodule ExDeliveryCertificateTest do
     CertificateData.new()
     |> CertificateData.add_sender_name("sender")
     |> CertificateData.add_receiver_name("receiver")
-    |> CertificateData.add_document_hash("hash")
+    |> CertificateData.add_tenant_id("tenant_id")
+    |> CertificateData.add_action_metadata(%{"signatures" => ["signature_data", "signature_data2"]})
+    |> CertificateData.add_request_data(%{"request_data" => "data"})
+    |> CertificateData.add_document(%{"type" => "application/pdf", "content" => "aGVsbG8gd29ybGQ="})
     |> CertificateData.add_delivery_date(DateTime.utc_now() |> DateTime.to_iso8601())
     |> CertificateData.add_delivery_provider("provider")
   end
@@ -21,9 +24,12 @@ defmodule ExDeliveryCertificateTest do
 
     assert {:ok, cert } = ExDeliveryCertificate.validate_certificate(res)
 
+    File.write!("test/files/test_cert-python.xml", res)
+
+
     assert cert.sender_name == "sender"
     assert cert.receiver_name == "receiver"
-    assert cert.document_hash == "hash"
+    assert cert.document == %{"content" => "aGVsbG8gd29ybGQ=", "type" => "application/pdf"}
     assert cert.delivery_provider == "provider"
 
 
@@ -35,9 +41,9 @@ defmodule ExDeliveryCertificateTest do
     xml_string = File.read!("test/files/test_cert.xml")
     assert {:ok,
     %ExDeliveryCertificate.CertificateData{
-      delivery_date: "2024-05-25T21:15:44.496712Z",
+      delivery_date: "2024-05-25T21:28:10.417516Z",
       delivery_provider: "provider",
-      document_hash: "hash",
+      document: "hash",
       receiver_name: "receiver",
       sender_name: "sender"
     }} = ExDeliveryCertificate.validate_certificate(xml_string)
@@ -59,6 +65,8 @@ defmodule ExDeliveryCertificateTest do
         subject_alt_name: X509.Certificate.Extension.subject_alt_name(["example.org", "www.example.org"])
       ]
     )
+    File.write!("test/files/test-ca-python.pem", X509.Certificate.to_pem(ca))
+
 
     pem_key = X509.PrivateKey.to_pem(my_key)
     pem_cert = X509.Certificate.to_pem(my_cert)
