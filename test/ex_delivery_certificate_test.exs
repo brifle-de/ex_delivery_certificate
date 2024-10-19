@@ -41,11 +41,13 @@ defmodule ExDeliveryCertificateTest do
     xml_string = File.read!("test/files/test_cert.xml")
     assert {:ok,
     %ExDeliveryCertificate.CertificateData{
-      delivery_date: "2024-05-25T21:28:10.417516Z",
+      delivery_date: "2024-10-18T21:37:14.083455Z",
       delivery_provider: "provider",
-      document: "hash",
+      document: %{"content" => "aGVsbG8gd29ybGQ=", "type" => "application/pdf"},
       receiver_name: "receiver",
-      sender_name: "sender"
+      sender_name: "sender",
+      request_data: %{"request_data" => "data"},
+      tenant_id: "tenant_id"
     }} = ExDeliveryCertificate.validate_certificate(xml_string)
 
   end
