@@ -40,22 +40,30 @@ defmodule ExDeliveryCertificate do
       unsigned_signature_properties: %{
 
       },
-      meta: %{"version" => "1.0"}
+      meta: %{"version" => "1.0", "base_url" => "https://deliverycerts.brifle.de/"}
     ]
   end
 
-
   def issue_certificate(%CertificateData{} = properties, private_pem, certificate_pem) do
-
     id = :crypto.strong_rand_bytes(16) |> Base.encode16(case: :lower) |> then(&(
       "_" <> &1)
     )
     data = CertificateData.to_json(properties)
     opts = get_ops(certificate_pem)
-    xml_data = ExCryptoSign.prepare_raw_embedded(id, [%{id: "certificate_data", content: data}],certificate_pem,opts)
-    {:ok, {xml_document_string, _signature}} = ExCryptoSign.Util.Signer.sign(xml_data, private_pem)
+    docs = [%{id: "certificate_data", content: data}]
+    xml_data = ExCryptoSign.prepare_document(id, docs,certificate_pem,opts)
+    {:ok, {_xml_document_string, signature}} = ExCryptoSign.Util.Signer.sign(xml_data, private_pem)
 
-    {:ok, xml_document_string}
+    {:ok, signed_xml} = ExCryptoSign.sign_and_verify(id, docs, certificate_pem, signature, opts)
+
+    base_url = "https://deliverycerts.brifle.de/"
+    export_data = %{
+      "#{base_url}certificate_data" => data
+    }
+
+    export = ExCryptoSign.export_document_signatures(signed_xml, export_data)
+
+    {:ok, export}
   end
 
   def validate_certificate(xml_document_string) do

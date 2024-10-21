@@ -18,6 +18,18 @@ defmodule ExDeliveryCertificateTest do
     |> CertificateData.add_delivery_provider("provider")
   end
 
+  test "issued_certificate_json" do
+    {pem_key, pem_cert} = generate_dummy_cert()
+    data = File.read!("test/files/cert_data copy.json")
+    certdata = CertificateData.from_json(data)
+
+    {:ok, res} = ExDeliveryCertificate.issue_certificate(certdata, pem_key, pem_cert)
+
+    File.write!("test/files/cert_data_result.xml", res)
+
+
+  end
+
   test "issue_certificate" do
     {pem_key, pem_cert} = generate_dummy_cert()
     {:ok, res} = ExDeliveryCertificate.issue_certificate(test_data(), pem_key, pem_cert)
