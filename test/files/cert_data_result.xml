@@ -3,7 +3,7 @@
     <baseUrl>https://documents.brifle.de/</baseUrl>
     <version>1.0</version>
   </Metadata>
-  <ds:Signature Id="_4f198e829acb7ed5818c5263e2f52219">
+  <ds:Signature Id="_83d79cd4c3a3414bd12697f2a8cfd241">
     <ds:SignedInfo>
       <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
       <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
@@ -19,31 +19,31 @@
           <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
         </ds:Transforms>
         <ds:DigestMethod Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha3-512"/>
-        <ds:DigestValue>MrF1nYk/n3NywTkUEe3DYbKuP/oqW9/rTSXTq9DsGZY+6vWwunpikS+9JlxxgdhNKxzn1onfSNQfIJwbS9dDfg==</ds:DigestValue>
+        <ds:DigestValue>FaZuDKuq5Qi9/2o2K1LmfwtqYvveNF+GU6w/JfyhvBVf3ICDnAeUbT/haDMWkni7idjbOJNahKDeiETRNlDZOg==</ds:DigestValue>
       </ds:Reference>
     </ds:SignedInfo>
-    <ds:SignatureValue>eEW2u3kDNg9VzvNYsBuTFO9uCwmal3f8rAiUYH1lnXHek+cvh5OaCZO+7QCzp9J38QYYC1DZkAIAqE4I62SfMg==</ds:SignatureValue>
+    <ds:SignatureValue>hwg73H5Tv+DUSj3/DWd9D9uyeTxe2lYqCXGtuUqPgxTm/iGKzTkuEdIjgDjWEQIJdlX6hqapuHWdRX07uYe2fw==</ds:SignatureValue>
     <ds:KeyInfo>
       <ds:X509Data>
         <ds:X509Certificate>
-          MIICSTCCAe+gAwIBAgIJANLQgeg8I+TfMAoGCCqGSM49BAMCMFkxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJDQTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwEQWNtZTEWMBQGA1UEAwwNRUNEU0EgUm9vdCBDQTAeFw0yNDEwMjExMjA4MzBaFw0yNTExMjAxMjEzMzBaMFIxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJDQTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwEQWNtZTEPMA0GA1UEAwwGU2FtcGxlMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE5EsTwc3XZhpygLICOKfOXuapyzu+imZFR2+xmKU+4PLzdDgcu9AaL7AcRJ8Qwj6sSce3/X1wwVxEGMuDIW6UKKOBpjCBozAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwHQYDVR0OBBYEFBD+tX2Ssfq7Qmny1oPP4t5WQQdiMB8GA1UdIwQYMBaAFIncW73at88DLHP22VTVecO4WwSLMCcGA1UdEQQgMB6CC2V4YW1wbGUub3Jngg93d3cuZXhhbXBsZS5vcmcwCgYIKoZIzj0EAwIDSAAwRQIhAOSVI83JlvuoP+BD8wWWUkosaJebs89XqhOsyjURGxMfAiBg/vvMnaTB0pqK15ybpy3zpck1rkEaCRf+8k9xodLTxw==
+          MIICSDCCAe+gAwIBAgIJAOm6K1u4YI4rMAoGCCqGSM49BAMCMFkxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJDQTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwEQWNtZTEWMBQGA1UEAwwNRUNEU0EgUm9vdCBDQTAeFw0yNDEwMjIwOTQwMDFaFw0yNTExMjEwOTQ1MDFaMFIxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJDQTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwEQWNtZTEPMA0GA1UEAwwGU2FtcGxlMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEsKJl2cqyA+00Z585d1CGfPmIVAuf44584OxjE41ftWzH7qOKQyLNyN4Cz7Sjg7MgFYqJOa17dn1Y8i/yImdOy6OBpjCBozAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwHQYDVR0OBBYEFKUs9ihsTuo5Y/QBSWlJIIKpmrd6MB8GA1UdIwQYMBaAFL/rKCuODgufPKcdi/AGBRdhhIPDMCcGA1UdEQQgMB6CC2V4YW1wbGUub3Jngg93d3cuZXhhbXBsZS5vcmcwCgYIKoZIzj0EAwIDRwAwRAIgcgUI985m8vVfkbDaP7BencOl/rQIEorGnVTrxbhEH6sCIFWtUvUUGaZMINx8w4ivjPpVEGaLYunbt7+fIblCARQX
         </ds:X509Certificate>
       </ds:X509Data>
     </ds:KeyInfo>
     <ds:Object>
-      <xades:QualifyingProperties Target="#_4f198e829acb7ed5818c5263e2f52219">
+      <xades:QualifyingProperties Target="#_83d79cd4c3a3414bd12697f2a8cfd241">
         <xades:SignedProperties Id="SignedProperties">
           <xades:SignedSignatureProperties>
-            <xades:SigningTime>2024-10-21T12:13:30.639828Z</xades:SigningTime>
+            <xades:SigningTime>2024-10-22T09:45:01.496838Z</xades:SigningTime>
             <xades:SigningCertificate>
               <xades:Cert>
                 <xades:CertDigest>
                   <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-                  <ds:DigestValue>rcxpGgfSCSf0W5IG/nFKgrX+755J5EFzevJiLondtAQ=</ds:DigestValue>
+                  <ds:DigestValue>62ypsz78YFUQ8HZ5t1AfzhDVLcwITR2JXfaCPEdjtcA=</ds:DigestValue>
                 </xades:CertDigest>
                 <xades:IssuerSerial>
                   <ds:X509IssuerName>ECDSA Root CA</ds:X509IssuerName>
-                  <ds:X509SerialNumber>15190784377562064095</ds:X509SerialNumber>
+                  <ds:X509SerialNumber>16841821429440745003</ds:X509SerialNumber>
                 </xades:IssuerSerial>
               </xades:Cert>
             </xades:SigningCertificate>

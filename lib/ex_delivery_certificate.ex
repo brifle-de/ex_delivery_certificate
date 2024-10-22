@@ -40,7 +40,7 @@ defmodule ExDeliveryCertificate do
       unsigned_signature_properties: %{
 
       },
-      meta: %{"version" => "1.0", "base_url" => "https://deliverycerts.brifle.de/"}
+      meta: %{"version" => "1.0", "baseUrl" => "https://deliverycerts.brifle.de/"}
     ]
   end
 
