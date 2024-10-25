@@ -26,7 +26,7 @@ defmodule ExDeliveryCertificate.MixProject do
       {:x509, "~> 0.8.8"},
       {:sweet_xml, "~> 0.7.4"},
         # own library for create xml based signatures
-      {:ex_crypto_sign, git: "git@github.com:brifle-de/ex_crypto_sign.git", tag: "v0.4.3"},
+      {:ex_crypto_sign, git: "git@github.com:brifle-de/ex_crypto_sign.git", tag: "v0.4.4"},
 
       {:jason, "~> 1.4.1"},
     ]

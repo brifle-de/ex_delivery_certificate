@@ -25,9 +25,7 @@ defmodule ExDeliveryCertificateTest do
 
     {:ok, res} = ExDeliveryCertificate.issue_certificate(certdata, pem_key, pem_cert)
 
-    File.write!("test/files/cert_data_result.xml", res)
-
-
+    File.write!("test/files/cert_data_result.xml", res)    
   end
 
   test "issue_certificate" do
