@@ -1,15 +1,43 @@
 defmodule ExDeliveryCertificate.CertificateData do
+
+  @supported_document_encodings [:base64, :json, :sha256, :sha512]
+
   defstruct [
     :sender_name,
     :receiver_name,
     :tenant_id, # the tenant id of the sender
     :receiver_id, # the account id of the receiver
     :document, # json string document or base64 encoded document
+    :document_encoding, # type of the document
     :request_data, # base64 encoded request data or json string
     :action_metadata, # base64 encoded or json string action metadata
     :delivery_date,
     :delivery_provider,
   ]
+
+  @doc """
+  Return the default values for the CertificateData struct.
+  """
+  def defaults() do
+    %{
+      document_encoding: :base64
+    }
+  end
+
+  @doc """
+  Populate the default values for the CertificateData struct.
+  """
+  defp populate_defaults(%__MODULE__{} = data) do
+    defaults = defaults()
+    Enum.reduce(Map.keys(defaults), data, fn key, acc ->
+      case Map.get(acc, key) do
+        nil -> Map.put(acc, key, Map.get(defaults, key))
+        _ -> acc
+      end
+    end)
+  end
+
+
 
   @doc """
   Create a new CertificateDate struct with the given provider.
@@ -65,10 +93,17 @@ defmodule ExDeliveryCertificate.CertificateData do
   end
 
   @doc """
-  add the document to the certificate data
+  Add the document to the certificate data
   """
-  def add_document(data, document) do
-    %{data | document: document}
+  def add_document(data, document) when is_map(document) do
+    %{data | document: document , document_encoding: :json}
+  end
+  def add_document(data, document), do: add_document(data, document, :base64)
+  def add_document(data, document, document_encoding) when document_encoding in @supported_document_encodings do
+    %{data | document: document , document_encoding: document_encoding}
+  end
+  def add_document(_data, _document, document_encoding) do
+    raise ArgumentError, "Unsupported document encoding: #{document_encoding}. Supported encodings are: #{inspect(@supported_document_encodings)}"
   end
 
   @doc """
@@ -104,10 +139,20 @@ defmodule ExDeliveryCertificate.CertificateData do
   @doc """
   Convert a JSON string to a CertificateDate struct.
   """
-  def from_json(json) do
-    values = Jason.decode!(json)
+  def from_json(json_string) do
+    values = Jason.decode!(json_string)
     |> Map.new(fn {k, v} -> {String.to_existing_atom(k), v} end)
     struct(__MODULE__, values)
+    |> populate_defaults()
+
+    # replace document_encoding with atom
+    |> Map.update(:document_encoding, :base64, fn enc ->
+      case enc do
+        enc when is_atom(enc) -> enc
+        enc when is_binary(enc) -> String.to_existing_atom(enc)
+        _ -> defaults().document_encoding
+      end
+    end)
   end
 
 end
